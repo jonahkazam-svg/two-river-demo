@@ -496,3 +496,16 @@ em{font-style:italic;color:var(--accent);font-weight:400}
 .co__metric b{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:clamp(2.4rem,5.4vw,3.7rem);line-height:1;background:linear-gradient(180deg,var(--ink),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent;display:block}
 .co__metric span{display:block;margin-top:.55rem;font-family:'IBM Plex Mono';font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
 @media(max-width:760px){ .co--feature{grid-template-columns:1fr} .co__metric{text-align:left;border-left:none;border-top:1px solid var(--line2);padding-left:0;padding-top:1.2rem;margin-top:.4rem} }
+
+/* ============ refined "how we build" cards ============ */
+.cards4{gap:1.3rem}
+.cards4 .card{background:linear-gradient(180deg,#ffffff,#f2f6f7);border:1px solid var(--line2);border-radius:18px;padding:2rem 1.7rem 1.7rem;position:relative;overflow:hidden;transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .4s}
+.cards4 .card::before{content:"";position:absolute;left:0;top:0;height:100%;width:3px;background:linear-gradient(180deg,var(--teal),var(--accent2));transform:scaleY(0);transform-origin:top;transition:transform .55s var(--ease)}
+.cards4 .card:hover::before{transform:scaleY(1)}
+.cards4 .card:hover{transform:translateY(-7px);box-shadow:0 28px 56px -30px rgba(15,42,40,.42);border-color:rgba(30,111,178,.3)}
+.cards4 .card .card__no{position:absolute;top:1.3rem;right:1.5rem;font-family:'Fraunces',Georgia,serif;font-weight:400;font-style:italic;font-size:2.6rem;line-height:1;color:var(--teal);opacity:.16;letter-spacing:0}
+.cards4 .card h3{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:1.4rem;color:var(--ink);margin:.1rem 0 .6rem}
+.cards4 .card p{color:var(--ink-mid);font-size:.92rem;line-height:1.6}
+/* matching lift for the approach-page model cards */
+.tcard{transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .4s}
+.tcard:hover{transform:translateY(-6px);box-shadow:0 24px 50px -30px rgba(15,42,40,.38);border-color:rgba(30,111,178,.3)}
